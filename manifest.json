@@ -1,0 +1,15 @@
+{
+    "name": "nl.btr.jitsi",
+    "description": "Description",
+    "architecture": "arm64",
+    "title": "Jitsi",
+    "hooks": {
+        "jitsi": {
+            "apparmor": "jitsi.apparmor",
+            "desktop":  "jitsi.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Development@bendingtherules.nl <email@domain.org>",
+    "framework" : "ubuntu-sdk-20.04"
+}

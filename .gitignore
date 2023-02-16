@@ -1,0 +1,10 @@
+.DS_Store
+build/
+# bundle.js
+node_modules/
+.clickable
+.idea/workspace.xml
+moc_.*
+moc\.*
+rcc_*
+rcc\.*

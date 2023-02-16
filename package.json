@@ -1,0 +1,21 @@
+{
+  "name": "jitsi-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "payload/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "nodemon -e js,css,scss --ignore ./build/ --ignore bundle.js --exec node build.js"
+  },
+  "dependencies": {
+    "clipboardy": "^3.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.16.10",
+    "@csstools/postcss-sass": "^5.0.1",
+    "esbuild-sass-plugin": "^2.4.4",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.20"
+  }
+}
