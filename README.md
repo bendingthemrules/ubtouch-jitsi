@@ -1,27 +1,27 @@
 # Jitsi
 
-[![OpenStore](https://open-store.io/badges/en_US.png)](https://open-store.io/app/nl.btr.jitsi)
-
 A free and open-source multiplatform voice, video conferencing and instant messaging application.
 
 ## Building
 
-Build the application by executing:
+Build the application by executing: `build.sh`
+
+Push to device with:
 
 ```bash
-./build.sh
-```
-
-Push to device with (make sure the versions match):
-
-```bash
-adb push nl.btr.jitsi_1.0.0_arm64.click
+adb push nl.btr.appName_1.0.0_arm64.click
 ```
 
 Open device with adb shell and execute:
 
 ```bash
-pkcon install-local --allow-untrusted nl.btr.jitsi_1.0.0_arm64.click
+pkcon install-local --allow-untrusted nl.btr.appName_1.0.0_arm64.click
+```
+
+Build pushHelper by executing:
+
+```bash
+cd pushnotifications/executable/ && qtdeploy build
 ```
 
 ## JS development
@@ -47,15 +47,3 @@ npm run dev
 ```
 
 You can also add the optional `--cp` or `--copy` flag to this command to automactically copy the bundled JavaScript payload to your clipboard and easily paste it in the browser, ex: `npm run dev --copy`
-
-### Push helper
-
-Build pushHelper by executing:
-
-```bash
-cd pushnotifications/executable/ && qtdeploy build
-```
-
-## License
-
-This project is licened under the GNU GPL v3 license

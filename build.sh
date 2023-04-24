@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-npm ci
-npm run build
+# npm ci
+# npm run build
 
 qtdeploy build
 mkdir -p build

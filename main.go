@@ -17,6 +17,7 @@
 package main
 
 import (
+	"jitsi-client/jitsi"
 	"os"
 
 	"github.com/therecipe/qt/core"
@@ -36,7 +37,9 @@ func main() {
 
 	var view = quick.NewQQuickView(nil)
 	rootObject := NewRootObject(nil)
+	qClient, _ := jitsi.GetQClient()
 	view.RootContext().SetContextProperty("rootObject", rootObject)
+	view.RootContext().SetContextProperty("QClient", qClient)
 
 	view.SetSource(core.NewQUrl3("qrc:/qml/Main.qml", 0))
 	view.SetResizeMode(quick.QQuickView__SizeRootObjectToView)
